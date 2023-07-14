@@ -18,5 +18,5 @@ git mv $SAMPLES_DIR Samples~ &> /dev/null || echo $SAMPLES_DIR is not found
 git rm $SAMPLES_DIR.meta
 git commit -m "release $TAG."
 git push -f origin $UPM_BRANCH
-git checkout -b $UPM_BRANCH@$TAG
-git push -f origin $UPM_BRANCH@$TAG
+git checkout -b $UPM_BRANCH@$NAME
+git push -f origin $UPM_BRANCH@$NAME

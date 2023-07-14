@@ -5,6 +5,9 @@ inputs:
     git-tag:
         description: "Tag name like v1.0.0"
         required: true
+    git-name:
+        description: "name like v1.0.0 or master"
+        required: true
     main-branch:
         description: "Main branch name"
         required: false
@@ -31,6 +34,7 @@ runs:
           shell: bash
           env:
               TAG: ${{ inputs.git-tag }}
+              NAME: ${{ inputs.git-name }}
               MAIN_BRANCH: ${{ inputs.main-branch }}
               UPM_BRANCH: ${{ inputs.upm-branch }}
               PKG_ROOT_DIR_PATH: ${{ inputs.pkg-root-dir-path }}
